@@ -1,4 +1,4 @@
 {
-    "name": "John",
-    "balance": 1234555.23
+    "name":"John",
+    "balance":"1234.56"
 }

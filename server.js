@@ -3,7 +3,7 @@
 // Usage:
 // 0. npm init -y
 // 1. Install dependencies: npm i express body-parser
-// 2. Run: server node server.js
+// 2. Run server: node server.js
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -15,7 +15,7 @@ app.use(express.static(path.resolve(__dirname, './')));
 
 app.post('/login', (req, res) => {
   const fs = require('fs');
-  fs.appendFile('./logins.txt', JSON.stringify(req.body) + '\n', function(err) {
+  fs.appendFile('./logins.json', JSON.stringify(req.body) + '\n', function(err) {
     if (err) {
       res.status(500).send('Server error');
       return console.log(err);

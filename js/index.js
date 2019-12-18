@@ -66,7 +66,6 @@ function fetchJson() {
         } );
 }
 
-
 //Login form Func
 document.querySelector('.login-form input[type=submit]')
     .addEventListener('click', login);
@@ -88,86 +87,6 @@ function login(e) {
         .then(_ => document.querySelector('.login-form').reset());
 }
 //end Login Func
-
-
-/*
-document.querySelector('.login-form input[type=submit]')
-    .addEventListener('click', login);
-
-function login(e) {
-    e.preventDefault();
-    fetch('login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: JSON.stringify({
-            //product: document.querySelector('.login-form input[name=name]').value,
-            //quantity: document.querySelector('.login-form input[name=itmRange]').value,
-            //colour: document.querySelector('.login-form select[name=itmColor]').value,
-            //sale: document.querySelector('.login-form select[name=itmSale]').value,
-            //price: document.querySelector('.login-form input[name=password]').value
-            shopList: document.querySelector('.login-form input[name=name]').value+";"
-            +document.querySelector('.login-form input[name=itmRange]').value+";"
-            +document.querySelector('.login-form select[name=itmColor]').value+";"
-            +document.querySelector('.login-form select[name=itmSale]').value+";"
-            +document.querySelector('.login-form input[name=password]').value
-        })
-    })
-        .then(_ => document.querySelector('.login-form').reset());
-}
-*/
-
-/*
-//Shopping List
-const list = document.querySelector('ul');
-const input = document.querySelector('input');
-const button = document.querySelector('button');
-const newItem = document.querySelector('.addItem');//btn add new item
-
-newItem.addEventListener('click', addNewItem);
-
-function addNewItem() {
-  const itemTxt = document.querySelector('.itemName');
-  const itemQuantity = document.querySelector('.itemRange');
-  const itemColor = document.querySelector('.itemColor');
-  const itemSale = document.querySelector('.itemSale');
-  const itemPrice = document.querySelector('.itemPrice');
-  const itemCalcPrice = document.querySelector('.itemCalcPrice');
- 
-      
-  let myItem = itemTxt.value
-  +" (quantity: "+itemQuantity.value
-  +", colour: "+itemColor.value
-  +", discount: "+itemSale.value+"% Off, "
-  +", price: $"+(itemSale.value === "0"?itemPrice.value*itemQuantity.value:((itemPrice.value*itemQuantity.value*itemSale.value)/100))
-  +")";
-  
-  itemCalcPrice.value = '';
-  itemTxt.value = '';
-
-  itemCalcPrice.value = (itemSale.value === "0"?itemPrice.value*itemQuantity.value:((itemPrice.value*itemQuantity.value*itemSale.value)/100));
-  
-  
-
-const listItem = document.createElement('li');
-const listText = document.createElement('span');
-const listBtn = document.createElement('button');
-
-listItem.appendChild(listText);
-listText.textContent = myItem;
-listItem.appendChild(listBtn);
-listBtn.textContent = 'Delete';
-list.appendChild(listItem);
-
-listBtn.onclick = function(e) {
-list.removeChild(listItem);
-}
-  input.focus();
-  
-}
-*/
 
 
 const list = document.querySelector('ol');
@@ -260,25 +179,3 @@ list.removeChild(listItem);
   input.focus();
   
 }
-
-
-/*
-//JSON Ajax
-const btnGetJsonAjax = document.querySelector('.shop-json-ajax');
-btnGetJsonAjax.addEventListener('click', getJsonAjax);
-function getJsonAjax() {
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            const data = JSON.parse(xhr.responseText);
-            document.querySelector('.product').innerText = data.product;//name;
-            document.querySelector('.quantity').innerText = data.quantity;//balance;
-             document.querySelector('.colour').innerText = data.colour;//balance;
-              document.querySelector('.sale').innerText = data.sale;//balance;
-               document.querySelector('.price').innerText = data.price;//balance;
-        }
-    }
-    xhr.open('GET', 'logins.json', true);
-    xhr.send();
-}
-*/

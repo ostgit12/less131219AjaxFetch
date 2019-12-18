@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AJAX/FETCH Sample</title>
 </head>
+
 <body>
 
-<!--
+ <!--   
 <p>Page loaded: <span class="page-loaded"></span></p>
 <section>
 <h1>AJAX/Fetch get HTML sample</h1>
@@ -18,15 +20,16 @@
 </section>
 -->
 
-<section>
-<h1>AJAX/Fetch get JSON sample</h1>
-<p>Client name:<span class="client-name"></span></p>
-<p>Account-balance:<span class="balance"></span></p>
-<button class="get-json-ajax">AJAX GET JSON</button>
-<button class="fetch-json">FETCH JSON</button>
-</section>
 
-<!--
+    <section>
+        <h1>AJAX/Fetch get JSON sample</h1>
+        <p>Client name:<span class="client-name"></span></p>
+        <p>Account-balance:<span class="balance"></span></p>
+        <button class="get-json-ajax">AJAX GET JSON</button>
+        <button class="fetch-json">FETCH JSON</button>
+    </section>
+
+
 <section>
         <h1>Form Sample</h1>
         <form class="login-form">
@@ -41,83 +44,66 @@
             <input type="submit">
         </form>
     </section>
--->
 
-<!--My shopping list-->
 
-<h1>Client shopping list</h1>
-          
+    <!--My shopping list-->
+
+    <h1>Client shopping list</h1>
+
     <section>
-    <form class="login-form">
-    <label for="item">Enter a new item:</label>
-    <input type="text" name="name" class="itemTxt">
-    
-    <button class="addItem">Add item</button>
-    <br><label for="itmRange">Itm. qty:</label>
-    0<input type="range" name="range" class="rngBar" value="50">100
-        
-    <label for="itmColor">
-    &nbsp;Itm. colour
-    </label>
-    <select name="itmColor" class="color" >
-    <option value="Blue">Blue</option>
-    <option value="Green">Green</option>
-    <option value="Yellow">Yellow</option>
-    <option value="Black">Black</option>
-    </select>
-        
-    <label for="itmPrice">Itm. price:</label>
-    <input type="text" name="password" class="itemPrice" value="10"  size="1" >
-    
-        
-    <label for="itemSale">Sale:</label>
-    <select class="discount" name="itmSale">
-    <option value="0">0% Off</option>
-    <option value="50">50% Off</option>
-    <option value="25">25% Off</option>
-    <option value="10">10% Off</option>
-    </select>  
-    
-    <input type="submit" value="Add card">
-    
-    <ul>
+    <!--    <form class="login-form">-->
+            <label for="itemName">Enter a new item:</label>
+            <input type="text" name="name" class="itemName">
 
-    </ul>
-    
- </form>
+            <button class="btnAddItem">Add item</button>
+            <br>
+            <label for="itemRange">Itm. qty:</label>
+            0
+            <input type="range" name="itmRange" class="itemRange" value="50">100
+
+            <label for="itemColor">
+                &nbsp;Itm. colour
+            </label>
+            <select name="itmColor" class="itemColor">
+                <option value="Blue">Blue</option>
+                <option value="Green">Green</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Black">Black</option>
+            </select>
+
+            <label for="itemSale">Sale:</label>
+            <select name="itmSale" class="itemSale">
+                <option value="50">50% Off</option>
+                <option value="35">35% Off</option>
+                <option value="25">25% Off</option>
+                <option value="10">10% Off</option>
+            </select>
+
+            <label for="itemPrice">Itm. price:</label>
+            <input type="text" name="password" class="itemPrice" value="10" size="1">
+            <input type="text" name="calcPrice" class="itemCalcPrice" size="1">
+
+            <input type="submit" value="Add card">
+
+            <ol id="shopList">
+
+            </ol>
+
+    <!--  </form>-->
     </section>
 
-<section>
-<h1>AJAX/Fetch get JSON client checkout card</h1>
-<p>Product:<span class="product"></span></p>
-<p>Quantity:<span class="quantity"></span></p>
-<p>Colour:<span class="colour"></span></p>
-<p>Discount:<span class="sale"></span>% Off</p>
-<p>Price:$<span class="price"></span></p>
-<button class="get-json-ajax">show checkout-card "AJAX GET JSON"</button>
-<button class="fetch-json">show checkout-card "FETCH JSON"</button>
-</section>
-
-
-
-
-<!--
-<section>
-        <h1>Form Sample</h1>
-        <form class="login-form">
-            <label>
-                Name: <input type="text" name="name">
-            </label>
-            <br>
-            <label>
-                Balance: <input type="text" name="password">
-            </label>
-            <br>
-            <input type="submit">
-        </form>
+    <section>
+        <h1>AJAX/Fetch get JSON client checkout card</h1>
+        <p>Product:<span class="product"></span></p>
+        <p>Quantity:<span class="quantity"></span></p>
+        <p>Colour:<span class="colour"></span></p>
+        <p>Discount:<span class="sale"></span>% Off</p>
+        <p>Price:$<span class="price"></span></p>
+        <button class="shop-json-ajax">shop card "AJAX GET JSON"</button>
+        <button class="shop-fetch-json">shop card "FETCH JSON"</button>
     </section>
--->
 
-<script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>

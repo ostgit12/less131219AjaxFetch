@@ -1,1 +1,1 @@
-{"product":"John","quantity":"62","colour":"Blue","sale":"25","price":"10"}
+{"name":"shopList#1","balance":[{"name":"aaaa","quantity":"50","color":"Blue","sale":"50","price":""},{"name":"nicolas","quantity":"50","color":"Blue","sale":"50","price":"250"},{"name":"John","quantity":"50","color":"Blue","sale":"50","price":"250"},{"name":"anna","quantity":"50","color":"Blue","sale":"50","price":"250"}]}
